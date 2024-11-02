@@ -1,0 +1,102 @@
+[gd_scene load_steps=3 format=3 uid="uid://buq0u3cxew2st"]
+
+[ext_resource type="Script" path="res://autenticador.gd" id="1_rg1tj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m0g25"]
+font_color = Color(1, 0, 0, 1)
+
+[node name="Autenticador" type="Control" node_paths=PackedStringArray("inserir_email", "inserir_senha", "botao_entrar", "saida_entrar", "entrar", "criar_email", "criar_apelido", "criar_senha", "botao_cadastrar", "saida_cadastrar", "cadastrar")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rg1tj")
+inserir_email = NodePath("Conteudo/Entrar/InserirEmail")
+inserir_senha = NodePath("Conteudo/Entrar/InserirSenha")
+botao_entrar = NodePath("Conteudo/Entrar/BotaoEntrar")
+saida_entrar = NodePath("Conteudo/Entrar/SaidaEntrar")
+entrar = NodePath("Conteudo/Entrar")
+criar_email = NodePath("Conteudo/Cadastrar/criarEmail")
+criar_apelido = NodePath("Conteudo/Cadastrar/criarApelido")
+criar_senha = NodePath("Conteudo/Cadastrar/criarSenha")
+botao_cadastrar = NodePath("Conteudo/Cadastrar/BotaoCadastrar")
+saida_cadastrar = NodePath("Conteudo/Cadastrar/SaidaCadastrar")
+cadastrar = NodePath("Conteudo/Cadastrar")
+
+[node name="Conteudo" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -105.0
+offset_right = 94.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Entrar" type="VBoxContainer" parent="Conteudo"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+metadata/_tab_index = 0
+
+[node name="Titulo" type="Label" parent="Conteudo/Entrar"]
+layout_mode = 2
+
+[node name="InserirEmail" type="LineEdit" parent="Conteudo/Entrar"]
+layout_mode = 2
+text = "teste@gmail.com"
+placeholder_text = "Inserir E-Mail"
+
+[node name="InserirSenha" type="LineEdit" parent="Conteudo/Entrar"]
+layout_mode = 2
+text = "12345678"
+placeholder_text = "Inserir senha"
+
+[node name="BotaoEntrar" type="Button" parent="Conteudo/Entrar"]
+layout_mode = 2
+text = "Entrar em sua conta"
+
+[node name="SaidaEntrar" type="Label" parent="Conteudo/Entrar"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_m0g25")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cadastrar" type="VBoxContainer" parent="Conteudo"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Titulo" type="Label" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+
+[node name="criarEmail" type="LineEdit" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+placeholder_text = "Criar E-Mail"
+
+[node name="criarApelido" type="LineEdit" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+placeholder_text = "Criar apelido"
+
+[node name="criarSenha" type="LineEdit" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+placeholder_text = "Criar senha"
+
+[node name="BotaoCadastrar" type="Button" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+text = "Criar a sua conta"
+
+[node name="SaidaCadastrar" type="Label" parent="Conteudo/Cadastrar"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_m0g25")
+horizontal_alignment = 1
+vertical_alignment = 1

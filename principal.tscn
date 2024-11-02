@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b44wsjly5aa86"]
+
+[ext_resource type="PackedScene" uid="uid://buq0u3cxew2st" path="res://autenticador.tscn" id="1_xo0ja"]
+
+[node name="Principal" type="Node"]
+
+[node name="Autenticador" parent="." instance=ExtResource("1_xo0ja")]

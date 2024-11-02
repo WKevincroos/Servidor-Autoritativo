@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://vt1rls1dccpy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_iag3k"]
+size = Vector3(800, 40, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kca6l"]
+size = Vector2(800, 40)
+
+[node name="Mapa" type="Node2D"]
+
+[node name="Plataforma" type="StaticBody2D" parent="."]
+position = Vector2(560, 516)
+metadata/_edit_group_ = true
+
+[node name="Retangulo" type="MeshInstance2D" parent="Plataforma"]
+mesh = SubResource("BoxMesh_iag3k")
+
+[node name="Colisor" type="CollisionShape2D" parent="Plataforma"]
+shape = SubResource("RectangleShape2D_kca6l")
