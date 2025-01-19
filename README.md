@@ -13,6 +13,3 @@ Demonstrar a responsibilidade de um servidor autoritativo e sua demanda por recu
 - Conhecimento em Lua, Go ou Typescript é indispensável
 - A documentação para utilização da API fornecida pelo back-end Nakama, em GDscript 2.0, é desatualizada e insatisfatória.
 - Desempenho geral aceitável
-
-# 📚 Tecnologias empregadas
-GDscript 2.0, Godot 4, Nakama for Godot, Lua
